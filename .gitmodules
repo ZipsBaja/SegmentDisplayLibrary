@@ -1,0 +1,6 @@
+[submodule "lib/zipslib"]
+	path = lib/zipslib
+	url = https://github.com/ZipsBaja/ZipsPicoLib
+[submodule "lib/pico-tm1637"]
+	path = lib/pico-tm1637
+	url = https://github.com/zyoung71/TM1637-pico
