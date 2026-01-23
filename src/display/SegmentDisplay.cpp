@@ -158,7 +158,7 @@ void SegmentDisplay::DisplaySet(size_t index, char value)
 
 uint32_t SegmentDisplay::GetHexFromSegments(uint32_t segments)
 {
-    ByteSplitter<uint8_t, uint32_t> splitter;
+    ByteSplitter<uint32_t, uint8_t> splitter;
     splitter.single = segments;
 
     uint8_t digit4 = splitter.many[3];
