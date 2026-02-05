@@ -84,7 +84,7 @@ public:
     template<typename V>
     void DisplayValue(size_t index, V value, bool align_left = false)
     {
-        char display[digits_per_device];
+        char display[digits_per_device + 1];
         if constexpr (std::is_integral_v<V>)
         {
             if constexpr (std::is_unsigned_v<V>)
