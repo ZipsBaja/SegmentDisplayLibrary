@@ -63,7 +63,7 @@ public:
     virtual ~SegmentDisplay();
     
     template<typename V>
-    void DisplayValueAll(V value)
+    void DisplayValueAll(V value, bool align_left = false)
     {
         char display[digit_count];
         if constexpr (std::is_integral_v<V>)
@@ -78,11 +78,11 @@ public:
         else if constexpr (std::is_same_v<V, const char*> || std::is_same_v<V, char*>)
             snprintf(display, digit_count, "%s");
         
-        DisplayTextAll(display);
+        DisplayTextAll(display, align_left);
     }
 
     template<typename V>
-    void DisplayValue(size_t index, V value)
+    void DisplayValue(size_t index, V value, bool align_left = false)
     {
         char display[digits_per_device];
         if constexpr (std::is_integral_v<V>)
@@ -97,7 +97,7 @@ public:
         else if constexpr (std::is_same_v<V, const char*> || std::is_same_v<V, char*>)
             snprintf(display, digits_per_device, "%s");
         
-        DisplayText(index, display);
+        DisplayText(index, display, align_left);
     }
 
     void DisplayClearAll();
