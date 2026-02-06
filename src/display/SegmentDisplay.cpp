@@ -68,6 +68,16 @@ SegmentDisplay::~SegmentDisplay()
     for (auto&& dev : devices)
         delete dev;
 }
+
+void SegmentDisplay::DisplayColonAll(bool display)
+{
+    
+}
+
+void SegmentDisplay::DisplayColon(size_t index, bool display)
+{
+
+}
     
 void SegmentDisplay::DisplayClearAll()
 {
@@ -79,6 +89,42 @@ void SegmentDisplay::DisplayClear(size_t index)
 {
     index = index >= device_count ? device_count - 1 : index;
     TM1637_clear(devices[index]);
+}
+
+void SegmentDisplay::DisplayLeftAll(int left, bool trailing_zero)
+{
+    for (auto&& device : devices)
+        TM1637_display_left(device, left, trailing_zero);
+}
+
+void SegmentDisplay::DisplayRightAll(int right, bool leading_zero)
+{
+    for (auto&& device : devices)
+        TM1637_display_left(device, right, leading_zero);
+}
+
+void SegmentDisplay::DisplayBothAll(int left, int right, bool leading_trailing_zero)
+{
+    for (auto&& device : devices)
+        TM1637_display_both(device, left, right, leading_trailing_zero);
+}
+
+void SegmentDisplay::DisplayLeft(size_t index, int left, bool trailing_zero)
+{
+    index = index >= device_count ? device_count - 1 : index;
+    TM1637_display_left(devices[index], left, trailing_zero);
+}
+
+void SegmentDisplay::DisplayRight(size_t index, int right, bool trailing_zero)
+{
+    index = index >= device_count ? device_count - 1 : index;
+    TM1637_display_left(devices[index], right, trailing_zero);
+}
+
+void SegmentDisplay::DisplayBoth(size_t index, int left, int right, bool leading_trailing_zero)
+{
+    index = index >= device_count ? device_count - 1 : index;
+    TM1637_display_both(devices[index], left, right, leading_trailing_zero);
 }
 
 void SegmentDisplay::DisplayTextAll(const char* text, bool align_left)

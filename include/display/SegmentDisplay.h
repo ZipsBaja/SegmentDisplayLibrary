@@ -100,9 +100,19 @@ public:
         DisplayText(index, display, align_left);
     }
 
+    void DisplayColonAll(bool display = true);
+    void DisplayColon(size_t index, bool display = true);
+
     void DisplayClearAll();
     void DisplayClear(size_t index);
     
+    void DisplayLeftAll(int left, bool trailing_zero = true);
+    void DisplayRightAll(int right, bool leading_zero = true);
+    void DisplayBothAll(int left, int right, bool leading_trailing_zero = true);
+    void DisplayLeft(size_t index, int left, bool trailing_zero = true);
+    void DisplayRight(size_t index, int right, bool trailing_zero = true);
+    void DisplayBoth(size_t index, int left, int right, bool leading_trailing_zero = true);
+
     void DisplayTextAll(const char* text, bool align_left = true);
     void DisplayText(size_t index, const char* text, bool align_left = true);
    
