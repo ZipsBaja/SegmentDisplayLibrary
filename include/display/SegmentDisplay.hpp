@@ -1,7 +1,7 @@
 #pragma once
 
-#include <util/ArrayView.h>
-#include <event/Event.h>
+#include <util/ArrayView.hpp>
+#include <event/Event.hpp>
 
 #include <vector>
 #include <stdio.h>

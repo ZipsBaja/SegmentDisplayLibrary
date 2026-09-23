@@ -1,6 +1,6 @@
-#include <display/SegmentDisplay.h>
+#include <display/SegmentDisplay.hpp>
 
-#include <display/animations/Animations.h>
+#include <display/animations/Animations.hpp>
 
 SegmentDisplay::SegmentDisplaySettings settings = SegmentDisplay::Create(pio0, 2, 3, 0, 7, 0);
 

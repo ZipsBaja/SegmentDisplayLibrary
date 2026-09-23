@@ -1,8 +1,8 @@
 #pragma once
 
-#include <util/ArrayView.h>
+#include <util/ArrayView.hpp>
 
-#include <stdint.h>
+#include <cstdint>
 
 constexpr uint8_t segment_none =        0b00000000;
 constexpr uint8_t segment_top =         0b00000001;

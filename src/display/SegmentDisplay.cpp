@@ -1,7 +1,7 @@
-#include <display/SegmentDisplay.h>
+#include <display/SegmentDisplay.hpp>
 
-#include <util/ByteSplitter.h>
-#include <util/TimeHandler.h>
+#include <util/ByteSplitter.hpp>
+#include <util/TimeHandler.hpp>
 
 #include <string.h>
 
